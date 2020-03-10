@@ -1,6 +1,5 @@
 os:
     - linux
-    - osx
   language: node_js
   env:
     - CXX=g++-4.8
@@ -35,5 +34,7 @@ os:
       - releases/*
     skip_cleanup: true
     on:
-      branch: master
+      branchs: 
+        - master
+        - developer
       tags: true
