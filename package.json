@@ -1,0 +1,37 @@
+{
+  "name": "@wangjuncode/binary-test",
+  "version": "1.0.0",
+  "description": "this is a demo, don't use it",
+  "main": "index.js",
+  "scripts": {
+    "build:debug": "node-gyp configure && node-gyp build --debug",
+    "build:release": "node-gyp configure && node-gyp build",
+    "clean": "node-gyp clean",
+    "test": "mocha",
+    "install": "node-pre-gyp install --fallback-to-build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wang-jun-coder/binary-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wang-jun-coder/binary-test/issues"
+  },
+  "homepage": "https://github.com/wang-jun-coder/binary-test#readme",
+  "dependencies": {
+    "node-addon-api": "^2.0.0",
+    "node-pre-gyp": "^0.14.0"
+  },
+  "devDependencies": {
+    "mocha": "^7.1.0"
+  },
+  "binary": {
+    "module_name": "hello",
+    "module_path": "./build/Release/",
+    "host":  "https://github.com/wang-jun-coder/binary-test/releases/download/",
+    "remote_path": "{version}",
+    "package_name": "{module_name}-v{version}-{node_abi}-{platform}-{arch}.tar.gz"
+  }
+}
