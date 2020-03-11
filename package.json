@@ -33,5 +33,8 @@
     "host":  "https://github.com/wang-jun-coder/binary-test/releases/download/",
     "remote_path": "{version}",
     "package_name": "{module_name}-v{version}-{node_abi}-{platform}-{arch}.tar.gz"
+  },
+  "engines": {
+    "node": ">=10.0.0"
   }
 }

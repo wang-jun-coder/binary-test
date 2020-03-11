@@ -11,6 +11,9 @@
         "msvs_settings": {
             'VCCLCompilerTool': { 'ExceptionHandling': 1 },
         },
+        "defines": [
+          "NAPI_DISABLE_CPP_EXCEPTIONS"
+        ],
     }
   ]
 }
