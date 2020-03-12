@@ -9,8 +9,8 @@ node_js:
   - "13"
 notifications:
   email:
-    - 1127132348@qq.com
-  email:
+    recipients:
+      - 1127132348@qq.com
     on_success: change
     on_failure: always
 addons:
