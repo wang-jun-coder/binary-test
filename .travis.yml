@@ -8,7 +8,7 @@ node_js:
   - "12.0.0"
   - "13"
 notifications:
-  recipients:
+  email:
     - 1127132348@qq.com
   email:
     on_success: change
@@ -22,11 +22,11 @@ addons:
 after_script: yarn build:release && yarn test
 deploy:
   provider: releases
-  api_key: ${GH_TOKEN}
+  token: ${GH_TOKEN}
   file_glob: true
   file:
     - releases/*
-  skip_cleanup: true
+  cleanup: false
   on:
     branch: master
     tags: true
