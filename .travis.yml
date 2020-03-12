@@ -19,13 +19,13 @@ addons:
       - ubuntu-toolchain-r-test
     packages:
       - g++-4.8
-after_script: yarn build:release && yarn test
+after_script: node-pre-gyp configure && node-pre-gyp build && node-pre-gyp package && yarn test
 deploy:
   provider: releases
   token: ${GH_TOKEN}
   file_glob: true
   file:
-    - releases/*
+    - stage/*
   cleanup: false
   on:
     branch: master
