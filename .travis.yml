@@ -19,7 +19,7 @@ addons:
       - ubuntu-toolchain-r-test
     packages:
       - g++-4.8
-after_script: npm run test
+after_script: yarn build:release && yarn test
 deploy:
   provider: releases
   api_key: ${GH_TOKEN}
