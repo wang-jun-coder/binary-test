@@ -27,9 +27,7 @@ deploy:
   token: ${GH_TOKEN}
   file_glob: true
   skip_cleanup: true
-  file:
-    - build/stage/**
-    - binding.gyp
+  file: build/stage/*
   on:
     branch: master
     tags: true
