@@ -26,7 +26,7 @@ deploy:
   file_glob: true
   file:
     - build/stage/*
-  cleanup: false
+  skip_cleanup: true
   on:
     branch: master
     tags: true
