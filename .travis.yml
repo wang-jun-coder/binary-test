@@ -24,9 +24,10 @@ deploy:
   provider: releases
   token: ${GH_TOKEN}
   file_glob: true
+  skip_cleanup: true
   file:
     - build/stage/*
-  skip_cleanup: true
+    - binding.gyp
   on:
     branch: master
     tags: true
