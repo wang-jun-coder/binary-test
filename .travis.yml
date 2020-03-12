@@ -19,9 +19,8 @@ addons:
       - ubuntu-toolchain-r-test
     packages:
       - g++-4.8
-before_script: node-pre-gyp configure && node-pre-gyp build
+before_script: node-pre-gyp configure && node-pre-gyp build && node-pre-gyp package
 script: yarn test
-after_script: node-pre-gyp package
 deploy:
   provider: releases
   token: ${GH_TOKEN}
