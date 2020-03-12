@@ -30,8 +30,7 @@
   "binary": {
     "module_name": "hello",
     "module_path": "./build/Release/",
-    "host":  "https://github.com/wang-jun-coder/binary-test/releases/download/",
-    "remote_path": "{version}",
+    "host":  "https://github.com/wang-jun-coder/binary-test/releases/download/{version}",
     "package_name": "{module_name}-v{version}-{node_abi}-{platform}-{arch}.tar.gz"
   },
   "engines": {
